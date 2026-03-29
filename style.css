@@ -1,0 +1,139 @@
+/* body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Orbitron, monospace;
+}
+
+.top-bar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.date {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.clock {
+    font-size: 90px;
+}
+
+.alarm-box {
+    margin-top: 30px;
+}
+
+.rainbow {
+    background: linear-gradient(90deg, red, yellow, lime, cyan, blue, violet);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 6s linear infinite;
+}
+
+.neon {
+    text-shadow:
+        0 0 10px cyan,
+        0 0 30px cyan,
+        0 0 60px cyan;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0%; }
+    100% { background-position: 400%; }
+} */
+
+
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Orbitron, monospace;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.clock {
+    font-size: 90px;
+}
+
+.date {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.rainbow {
+    background: linear-gradient(90deg, red, yellow, lime, cyan, blue, violet);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flow 6s linear infinite;
+}
+
+.neon {
+    text-shadow:
+        0 0 10px cyan,
+        0 0 30px cyan,
+        0 0 60px cyan;
+}
+
+@keyframes flow {
+    from { background-position: 0%; }
+    to { background-position: 400%; }
+}
+
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+#newYearText {
+    position: fixed;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: gold;
+    text-shadow:
+        0 0 20px red,
+        0 0 40px yellow,
+        0 0 80px orange;
+    display: none;
+    z-index: 5;
+    animation: zoomIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(1); }
+    to   { transform: scale(1.1); }
+}
